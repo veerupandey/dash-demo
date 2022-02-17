@@ -11,6 +11,7 @@ app = Dash(
     __name__,
     external_stylesheets=["https://www.google.com/css/maia.css"],
 )
+server = app.server
 app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
 
