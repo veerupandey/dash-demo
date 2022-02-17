@@ -53,7 +53,7 @@ app.layout = html.Div(
 
 @app.callback(Output("scatter", "srcDoc"), [Input("year", "value")])
 def altair_fig(year):
-    df = gapminder.query("year == %d" % (year or 1952))
+    df = gapminder.query("year <= %d" % (year or 1952))
     return (
         alt.Chart(df, height=250, width=400)
         .mark_circle()
